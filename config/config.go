@@ -50,7 +50,6 @@ func LoadPacketConfig(file string) (*PacketConfig, error) {
 		return nil, err
 	}
 
-	// Normalize targets: convert strings to Target structs
 	for i, t := range config.Targets {
 		switch v := t.(type) {
 		case string:
